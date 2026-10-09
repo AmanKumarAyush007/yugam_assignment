@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#225749">
+  <title>Student Registration | Yugam International School</title>
+  <meta name="description" content="Create and validate your Yugam International School student profile.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="./" aria-label="Yugam International School student portal home">
+      <span class="logo" aria-hidden="true">Y</span>
+      <span class="brand-name">Yugam <small>International School</small></span>
+    </a>
+    <span class="header-note">Rooted in values.<br>Ready for the world.</span>
+  </header>
+  <main>
+    <aside>
+      <div class="eyebrow">
+        <span></span>
+        STUDENT PORTAL
+      </div>
+      <h1>Begin your journey with <em>Yugam.</em></h1>
+      <p>Create one secure account to complete your student profile and stay connected.</p>
+      <div class="school-meta" aria-label="School details">
+        <span>CBSE</span>
+        <span>PG-XII</span>
+        <span>Kanpur</span>
+      </div>
+      <div class="art" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="tile t1">S</div>
+        <div class="tile t2">Y</div>
+        <div class="tile t3">S</div>
+      </div>
+      <div class="aside-bottom">
+        <span>TRUTH</span>
+        <span>PURPOSE</span>
+        <span>BALANCE</span>
+      </div>
+    </aside>
+    <section class="workspace" aria-label="Account setup">
+      <div class="steps" aria-label="Registration progress">
+        <span id="step1" class="active" aria-current="step">01 &nbsp; Registration</span>
+        <div></div>
+        <span id="step2">02 &nbsp; Profile</span>
+      </div>
+      <div id="setup" class="notice" hidden>
+        <strong>Developer setup needed.</strong>
+        Add the Firebase web configuration from README.md to enable secure registration.
+      </div>
+      <div id="status" role="status" aria-live="polite"></div>
+      <div id="account-view">
+        <div class="eyebrow muted">WELCOME TO YUGAM</div>
+        <h2 id="account-title">Create your student account</h2>
+        <p class="subtitle" id="account-subtitle">Enter your details to begin your student profile.</p>
+        <form id="account-form" novalidate>
+          <div id="register-name"></div>
+          <div id="account-fields"></div>
+          <button class="primary" id="account-submit" type="submit">Create account <span aria-hidden="true">&rarr;</span></button>
+        </form>
+        <p class="switch-copy">
+          <span id="switch-label">Already have an account?</span>
+          <button id="switch-mode" class="text-button">Sign in</button>
+        </p>
+        <div class="secure">
+          <span aria-hidden="true">&#128274;</span>
+          <span>Your account is protected with Firebase Authentication.</span>
+        </div>
+      </div>
+      <div id="profile-view" hidden>
+        <div class="profile-top">
+          <div class="eyebrow muted">STUDENT PROFILE</div>
+          <button id="logout" class="text-button">Log out &rarr;</button>
+        </div>
+        <h2>Complete your profile</h2>
+        <p class="subtitle">Your registration details are already here. Complete the remaining fields.</p>
+        <form id="profile-form" novalidate>
+          <div id="profile-fields"></div>
+          <button class="primary" id="validate-button" type="submit">Validate profile <span aria-hidden="true">&#10003;</span></button>
+        </form>
+        <p class="footnote">All five fields are required. Validation checks your form; it does not change your account credentials.</p>
+      </div>
+      <footer>
+        <span>Yugam International School, Kanpur</span>
+        <span>SECURE STUDENT ONBOARDING</span>
+      </footer>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

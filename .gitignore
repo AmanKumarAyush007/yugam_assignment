@@ -1,0 +1,15 @@
+# Generated from environment variables during local setup or deployment.
+public/firebase-config.js
+
+# Local environment files may contain project-specific configuration.
+.env
+.env.*
+!.env.example
+
+# Dependencies and deployment artifacts.
+node_modules/
+dist/
+.vercel/
+site-deploy/
+site-publish/
+.openai/
