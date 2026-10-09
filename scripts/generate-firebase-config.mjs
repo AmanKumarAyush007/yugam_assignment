@@ -1,6 +1,14 @@
 import { writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
+try {
+  process.loadEnvFile();
+} catch (error) {
+  if (error.code !== "ENOENT") {
+    throw error;
+  }
+}
+
 const ENVIRONMENT_KEYS = {
   apiKey: "FIREBASE_API_KEY",
   authDomain: "FIREBASE_AUTH_DOMAIN",
